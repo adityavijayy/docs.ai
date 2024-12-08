@@ -1,0 +1,20 @@
+{
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "mongodb": "^6.11.0",
+    "mongoose": "^8.8.4",
+    "quill": "^2.0.3",
+    "react-scripts": "^3.0.1",
+    "socket.io": "^4.8.1",
+    "socket.io-client": "^4.8.1"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.1.7"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "server": "nodemon server.js",
+    "dev": "concurrently \"npm run server\" \"npm start\""
+  }
+}
