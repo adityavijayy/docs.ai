@@ -1,0 +1,127 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f5f6f8;
+  margin: 0;
+}
+
+.container .ql-editor {
+  width: 8.5in;
+  min-height: 11in;
+  padding: 1in;
+  margin: 1rem;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, .5);
+  background-color: white;
+}
+
+.container .ql-container.ql-snow {
+  border: none;
+  display: flex;
+  justify-content: center;
+}
+
+.container .ql-toolbar.ql-snow {
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: #F3F3F3;
+  border: none;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, .5);
+}
+
+@page {
+  margin: 1in;
+}
+
+@media print {
+  body {
+    background: none;
+  }
+
+  .container .ql-editor {
+    width: 6.5in;
+    height: 9in;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+    align-self: flex-start;
+  }
+
+  .container .ql-toolbar.ql-snow {
+    display: none;
+  }
+}
+
+.document-title {
+  text-align: center;
+  color: #253546;
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.watermark {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 1.2rem;
+  font-weight: 550;
+  color: rgba(42, 59, 77, 0.15);  /* Very subtle color */
+  pointer-events: none;  /* Makes it non-interactive */
+  user-select: none;    /* Prevents text selection */
+  z-index: 1;
+}
+
+.watermark span {
+  color: rgba(150, 89, 224, 0.15);  /* Matching brand blue but translucent */
+}
+
+.title-input {
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #0e2738;
+  outline: none;
+  padding: 2px 4px;
+  width: 300px;
+  text-align: center;
+}
+
+.document-title span {
+  cursor: pointer;
+  padding: 2px 4px;
+}
+
+.document-title span:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+}
+
+.brand-container {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 100;
+}
+
+.brand-logo {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2c3e50;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.brand-logo:hover {
+  opacity: 0.8;
+}
+
+.brand-logo span {
+  color: #3498db;
+}
